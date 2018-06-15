@@ -23,7 +23,6 @@
     "node": ">=4.0.0"
   },
   "devDependencies": {
-    "express": "^4.16.3",
     "grunt": "^1.0.1",
     "grunt-autoprefixer": "^3.0.4",
     "grunt-cli": "^1.2.0",
@@ -41,6 +40,7 @@
   },
   "license": "MIT",
   "dependencies": {
+    "express": "^4.16.3",
     "morgan": "^1.9.0",
     "serve-static": "^1.13.2"
   }
