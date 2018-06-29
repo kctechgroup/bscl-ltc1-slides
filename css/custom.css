@@ -1,0 +1,23 @@
+.container {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 100%;
+}
+/* 
+section.present > img {
+    height: 75%;
+    width: 75%;
+} */
+
+table.center > tbody > tr > td {
+    text-align: center;
+}
+
+section.present img, 
+section.present pre {
+    box-shadow: none;
+}
+
+section.present > p > code {
+    color: #ff0000
+}
