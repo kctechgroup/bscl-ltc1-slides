@@ -18,6 +18,7 @@ section.present pre {
     box-shadow: none;
 }
 
-section.present > p > code {
+section.present > p > code,
+section.present > ul > li > code {
     color: #ff0000
 }

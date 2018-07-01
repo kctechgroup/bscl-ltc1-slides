@@ -102,15 +102,17 @@
 					<p>What are we going to be using today?</p>
 				</section>
 				<section>
-					<h2>Raspberry&nbsp;Pi</h2>
+					<h1>The Hardware</h1>
+					<p>Raspberry&nbsp;Pi</p>
 					<img src="img/raspi-logo-med.png" alt="Raspberry Pi Logo">
 				</section>
 				<section>
-					<!-- <h2>Python</h2> -->
+					<h1>The Language</h1>
 					<img src="img/python-logo-generic.svg" alt="Python Logo">
 				</section>
 				<section>
 					<!-- <h2>Minecraft</h2> -->
+					<h1>The Fun</h1>
 					<!-- Would be nice if I could find an SVG file of this or convert this svg element out to external file -->
 					<svg viewBox="0 0 252 43" id="minecraft" width="100%" height="100%">
 						<g fill="#B4ACA8" fill-rule="evenodd">
@@ -155,33 +157,18 @@
 							 fill="#E0DBD6"></path>
 						</g>
 					</svg>
-
 				</section>
 			</section>
 			<section>
-				<section>
-					<h1>Lets Get Started</h1>
-					<ul>
-						<li>Launch your Python IDE -- Thonny</li>
-						<li>Start Minecraft</li>
-					</ul>
-				</section>
-				<section>
-					<h2>Thonny IDE</h2>
-					<!--TODO: Create Animated GIF with start sequence -->
-				</section>
-				<section>
-					<h2>Minecraft</h2>
-				</section>
-			</section>
-			<section>
-				<h1>Programming Concepts</h1>
+				<h1>Let's Get Started</h1>
+				<p>We've got to roll through a few basics first.</p>
 			</section>
 			<section>
 				<section>
 					<h2>Data Types</h2>
-					<small>Data exists with different characteristics and behaviors.</small>
+					<p>In coding, we deal with many different types of data.</p>
 					<p class="fragment">Text is of type: <code>string</code></p>
+					<p class="fragment">On or Off states are of type: <code>boolean</code></p>
 					<p class="fragment">Whole numbers like 1, 2, 3, etc are of type: <code>integer</code></p>
 					<p class="fragment">Numbers like 3.14 are of type: <code>float</code></p>
 					<p class="fragment"><em>These are some of the basic built-in data types</em></p>
@@ -190,16 +177,67 @@
 			<section>
 				<h2>Variables</h2>
 				<p>Used to store information.</p>
-				<pre class="fragment"><code data-trim>
-					 # Keep the value 4 in the variable a
-					a = 4
+				<pre><code class="python" data-trim>
+					# Store some numbers in named variables
+					r = 4
+					pi = 3.14
+					coding_is_fun = True
 					# Keep the string called Kevin in a variable my_name
 					my_name = 'Kevin'
 				</code></pre>
 			</section>
 			<section>
-				<h2>Expressions</h2>
-				<p>Combinations of variables or primitives</p>
+				<section>
+					<h2>Expressions</h2>
+					<p>Combinations of variables or primitives to form a result</p>
+					<pre><code class="python" data-trim>
+						# Math Operations
+						4 + 5                              # 9
+						pi * (r ** 2)                      # 50.24
+						# Combining strings
+						'my name is ' + my_name            # my name is Kevin
+					</code></pre>
+				</section>
+				<section>
+					<h2>Variables + Expressions</h2>
+					<p>You can store the results of expressions in variables</p>
+					<pre><code class="python" data-trim>
+						circumference = pi * (r ** 2)      # circumference is 50.24
+					</code></pre>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h2>Control Structures</h2>
+					<p>Allow you to make decisions in your code.</p>
+					<ul>
+						<li>Make choices with <code>if</code> statements</li>
+						<li>Repeat code sections with <code>while</code> loops</li>
+						<li>Iterate through things with <code>for</code> loops</li>
+					</ul>
+				</section>
+				<section>
+					<h3><code>if</code> Statements</h3>
+					<pre><code class="python" data-trim>
+						if circumference > 50:
+						    big_circle = true
+						else:
+						    big_circle = false
+					</code></pre>
+					<br>
+					<em class="fragment">Indentation is important in Python!</em>
+				</section>
+				<section>
+					<h3><code>while</code> Loops</h3>
+					<pre><code class="python" data-trim>
+						a = 1
+						b = 1
+						while a < 5:
+						    a = b + 1
+						    b = b + a
+						# a will be 8 and b will be 15 and the loop ran three times.
+					</code></pre>
+				</section>
 			</section>
 		</div>
 	</div>
