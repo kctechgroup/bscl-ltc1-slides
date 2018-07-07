@@ -5,13 +5,16 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-	<title>reveal.js</title>
+	<title>BSCL - Learning to Code I</title>
 
 	<link rel="stylesheet" href="css/reveal.css">
 	<link rel="stylesheet" href="css/theme/black.css">
 
 	<!-- Theme used for syntax highlighting of code -->
 	<link rel="stylesheet" href="lib/css/zenburn.css">
+
+	<!-- Font Awesome Tie-in -->
+	<link rel="stylesheet" href="css/all.css">
 
 	<!-- Custom CSS Tie-in -->
 	<link rel="stylesheet" href="css/custom.css">
@@ -28,7 +31,7 @@
 
 <body>
 	<div class="reveal">
-		<div class="slides">
+		<span class="slides">
 			<section id="intro">
 				<img src="img/LearnToCode.jpg" />
 			</section>
@@ -90,11 +93,32 @@
 			<section id="agenda" data-background-color="#447EFF">
 				<!-- TODO: Need to formalize this a bit more-->
 				<h1>Agenda</h1>
-				<ul>
-					<li>Getting Started - 5:45</li>
-					<li>Programming Concepts I - 6:00 - 6:15</li>
-					<li>Worksheet I</li>
-				</ul>
+				<table>
+					<tr>
+						<td>Getting Started</td>
+						<td>5:30</td>
+					</tr>
+					<tr>
+						<td>Programming Concepts Intro</td>
+						<td>5:40</td>
+					</tr>
+					<tr>
+						<td>Worksheet I</td>
+						<td>6:00</td>
+					</tr>
+					<tr>
+						<td>Minecraft and Python</td>
+						<td>6:30</td>
+					</tr>
+					<tr>
+						<td>Worksheet II</td>
+						<td>6:50</td>
+					</tr>
+					<tr>
+						<td>Wrap-up</td>
+						<td>7:20</td>
+					</tr>
+				</table>
 			</section>
 			<section id="technologies" data-background-color="#fff">
 				<section>
@@ -165,31 +189,159 @@
 			</section>
 			<section>
 				<section>
-					<h2>Data Types</h2>
-					<p>In coding, we deal with many different types of data.</p>
-					<p class="fragment">Text is of type: <code>string</code></p>
-					<p class="fragment">On or Off states are of type: <code>boolean</code></p>
-					<p class="fragment">Whole numbers like 1, 2, 3, etc are of type: <code>integer</code></p>
-					<p class="fragment">Numbers like 3.14 are of type: <code>float</code></p>
-					<p class="fragment"><em>These are some of the basic built-in data types</em></p>
+					<h2>Some of what you'll see</h2>
+				</section>
+				<section>
+					<h2>Running Python</h2>
+					<p>The Python
+						<strong>REPL</strong> - Read, Eval, Print, and Loop</p>
+					<pre><code class="nohighlight" data-trim data-noescape>
+						>>> <span class="fragment"><i class="fa fa-arrow-left"></i> This is the REPL prompt</span>
+						<span class="fragment">...</span><span class="fragment"> <i class="fa fa-arrow-left"></i> This is what the REPL prompt looks like when it
+						...    expects something based on the previous line.</span>
+					</code></pre>
+					<small class="fragment" style="color:lightgray">You can type commands directly and have them processed immediately in Python!</small>
+				</section>
+				<section>
+					<h2>Comments</h2>
+					<p>Describes your code, but doesn't "run"</p>
+					<pre><code class="python" data-trim>
+						# You can comment above a section a code
+						money = 500
+						for i in range(5):
+							money = money * 1.03  # ... and also on the same line
+					</code></pre>
+				</section>
+				<section>
+					<h2>Errors</h2>
+					<div class="fragment">
+						<p>
+							<q>All of my code starts off perfect.</q>
+						</p>
+						<small> -- No programmer ever.</small>
+					</div>
+					<div class="fragment">
+						<pre><code class="nohighlight" data-trim data-noescape>
+						>>> pi = 3.14
+						>>> a = pi * (r**2)
+						Traceback (most recent call last):
+						File "&lt;stdin&gt;", <mark>line 1</mark>, in &lt;module&gt;
+						<mark>NameError</mark>: <mark>name 'r' is not defined</mark>
+					</code></pre>
+						<br>
+						<p>Error output includes line number, type, and description of error.</p>
+					</div>
 				</section>
 			</section>
 			<section>
-				<h2>Variables</h2>
-				<p>Used to store information.</p>
-				<pre><code class="python" data-trim>
-					# Store some numbers in named variables
-					r = 4
-					pi = 3.14
-					coding_is_fun = True
-					# Keep the string called Kevin in a variable my_name
-					my_name = 'Kevin'
-				</code></pre>
+				<section>
+					<h2>Data Types</h2>
+					<p>In coding, we deal with many different types of data.</p>
+					<p class="fragment">Text:
+						<code>string</code>
+					</p>
+					<p class="fragment">Whole numbers like 1, 2, 3, etc:
+						<code>integer</code>
+					</p>
+					<p class="fragment">Numbers like 3.14 or 1.2:
+						<code>float</code>
+					</p>
+					<p class="fragment">On or Off:
+						<code>boolean</code>
+					</p>
+					<p class="fragment">
+						<em style="color:gray">These are some of the basic built-in data types to get us going!</em>
+					</p>
+				</section>
+				<section>
+					<h2>String</h2>
+					<p>Used for text data like words and sentences.</p>
+					<pre><code class="python" data-trim>
+						>>> message1 = 'I am a sentence'   # you can use single
+						>>> message2 = " from two parts."  # ... or double quotes
+						>>> message1 + message2            # and glue them together
+						 'I am a sentence from two parts.'
+					</code></pre>
+				</section>
+				<section>
+					<h2>Integer</h2>
+					<p>Used for round/whole numbers.</p>
+					<pre><code class="python" data-trim>
+						>>> a = 101
+						>>> b = 50
+						>>> a + b
+						150
+					</code></pre>
+				</section>
+				<section>
+					<h2>Float</h2>
+					<p>Used for decimal numbers</p>
+					<pre><code class="python" data-trim>
+						>>> a = 5.5
+						>>> b = 2.0
+						>>> a / b
+						2.75
+					</code></pre>
+				</section>
+				<section>
+					<h2>Boolean</h2>
+					<p><code>True</code> or <code>False</code> conditions</p>
+					<pre><code class="python" data-trim>
+						>>> a = 5
+						>>> b = 4
+						>>> a > b
+						True
+						>>> b > a
+						False
+					</code></pre>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h2>Variables</h2>
+					<p>Used to store information in programs.</p>
+					<pre><code class="python" data-trim>
+						# Store some numbers in named variables
+						r = 4
+						pi = 3.14
+						coding_is_fun = True
+						# Keep the string called Kevin in a variable my_name
+						my_name = 'Kevin'
+					</code></pre>
+					<p>The assignment operator (a single <code>=</code>) is used to store information into a variable.</p>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h2>Operators</h2>
+					<p>Used to perform operations!</p>
+					<pre><code class="python" data-trim data-noescape>
+										# Arithmetic operators
+										>>> 4 + 5      # 4 plus 5
+										9
+										>>> 8 / 4      # 8 divided by 4
+										2
+									</code></pre>
+					<pre><code class="python" data-trim data-noescape>
+										# Assignment Operators
+										>>> a = 4      # assign <em>a</em> the value of 4
+										>>> a += 1     # same as: <em>a = a + 1</em>
+										>>> a
+										5
+									</code></pre>
+					<pre><code class="python" data-trim data-noescape>
+										# Comparison Operators (returns Boolean result)
+										>>> a > 3      # check if <em>a</em> is greater than 3
+										True
+										>>> a != 5     # check if <em>a</em> is not equal to 5
+										False
+									</code></pre>
+				</section>
 			</section>
 			<section>
 				<section>
 					<h2>Expressions</h2>
-					<p>Combinations of variables or primitives to form a result</p>
+					<p>Compute things and produce a result!</p>
 					<pre><code class="python" data-trim>
 						# Math Operations
 						4 + 5                              # 9
@@ -200,7 +352,7 @@
 				</section>
 				<section>
 					<h2>Variables + Expressions</h2>
-					<p>You can store the results of expressions in variables</p>
+					<p>You can store the result of an expression in a variable</p>
 					<pre><code class="python" data-trim>
 						circumference = pi * (r ** 2)      # circumference is 50.24
 					</code></pre>
@@ -211,18 +363,26 @@
 					<h2>Control Structures</h2>
 					<p>Allow you to make decisions in your code.</p>
 					<ul>
-						<li>Make choices with <code>if</code> statements</li>
-						<li>Repeat code sections with <code>while</code> loops</li>
-						<li>Iterate through things with <code>for</code> loops</li>
+						<li>Make choices with
+							<code>if</code> statements</li>
+						<li>Repeat code sections with
+							<code>while</code> loops</li>
+						<li>Iterate through things with
+							<code>for</code> loops</li>
 					</ul>
 				</section>
 				<section>
-					<h3><code>if</code> Statements</h3>
+					<h3>
+					<code>if</code> Statements</h3>
+					<p>if <i class="fa fa-arrow-right"></i> elif <i class="fa fa-arrow-right"></i> else</p>
 					<pre><code class="python" data-trim>
-						if circumference > 50:
-						    big_circle = true
-						else:
-						    big_circle = false
+						>>> if circumference > 50:     # check if greater than 50
+						...     circle_desc = "Big"    # if so, describe as Big!
+						... elif circumference >= 30:  # otherwise, check btwn 30 and 50
+						...     circle_desc = "Medium" # if so, describe as Medium!
+						... else:                      # otherwise,
+						...     circle_desc = "Small"  # describe as Small!
+
 					</code></pre>
 					<br>
 					<em class="fragment">Indentation is important in Python!</em>
@@ -230,12 +390,31 @@
 				<section>
 					<h3><code>while</code> Loops</h3>
 					<pre><code class="python" data-trim>
-						a = 1
-						b = 1
-						while a < 5:
-						    a = b + 1
-						    b = b + a
-						# a will be 8 and b will be 15 and the loop ran three times.
+						>>> a = 1
+						>>> b = 1
+						>>> count = 0
+						>>> while a < 5:
+						...     count += 1
+						...     a = b + 1
+						...     b = b + a
+						...
+						>>> print("a: {}, b: {}, count: {}".format(a, b, count))
+						a: 8, b: 15, count: 3
+					</code></pre>
+				</section>
+				<section>
+					<h3><code>for</code> Loops</h3>
+					<pre><code class="python" data-trim data-noescape>
+						>>> # Begin a loop between 0 and 5 and print the
+						>>> # value of <em>i</em> at each step
+						>>> for i in range(5):            
+						...     print(i)
+						...
+						0
+						1
+						2
+						3
+						4
 					</code></pre>
 				</section>
 			</section>
@@ -258,6 +437,8 @@
 			// specified using percentage units.
 			width: 960,
 			height: 700,
+			// Push each slide change to the browser history
+			history: true,
 			// Factor of the display size that should remain empty around the content
 			margin: 0.2,
 			slideNumber: 'h.v',
