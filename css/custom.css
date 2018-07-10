@@ -19,6 +19,7 @@ section.present pre {
 }
 
 section.present > p > code,
-section.present > ul > li > code {
+section.present > ul > li > code,
+section.present > small > code {
     color: #ff0000
 }
